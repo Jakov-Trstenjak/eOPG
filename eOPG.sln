@@ -5,6 +5,10 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eOPG", "eOPG\eOPG.csproj", "{A0953BAC-605D-458E-9932-853D868A6672}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eOPG.Services.Api", "eOPG.Services.Api\eOPG.Services.Api.csproj", "{AD116CFF-0CF2-45A3-9C8E-64630209AA66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eOPG.Repositories.Api", "eOPG.Repositories.Api\eOPG.Repositories.Api.csproj", "{98BB5DF0-64D1-4B75-9B83-92CB3CC88BEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A0953BAC-605D-458E-9932-853D868A6672}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0953BAC-605D-458E-9932-853D868A6672}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0953BAC-605D-458E-9932-853D868A6672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD116CFF-0CF2-45A3-9C8E-64630209AA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD116CFF-0CF2-45A3-9C8E-64630209AA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD116CFF-0CF2-45A3-9C8E-64630209AA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD116CFF-0CF2-45A3-9C8E-64630209AA66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98BB5DF0-64D1-4B75-9B83-92CB3CC88BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BB5DF0-64D1-4B75-9B83-92CB3CC88BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BB5DF0-64D1-4B75-9B83-92CB3CC88BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BB5DF0-64D1-4B75-9B83-92CB3CC88BEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
