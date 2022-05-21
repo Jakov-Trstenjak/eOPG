@@ -1,4 +1,4 @@
-﻿using eOPG.ClassLibrary.Api;
+﻿using eOPG.ClassLibrary.Api.Models;
 using eOPG.Services.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,8 +16,8 @@ namespace e_OPG.Controllers
 
         #endregion
 
-
-        public async Task<FamilyFarmInfo> CreateFamilyFarm(
+        [HttpPut(Name = "CreateFamilyFarm")]
+        public async Task<FamilyFarm> CreateFamilyFarm(
             string name,
             string adress,
             int regionId,
@@ -25,6 +25,15 @@ namespace e_OPG.Controllers
         {
             
             var result = await _familyFarmService.CreateFamilyFarm(name, adress, regionId, cityId);
+
+            return result;
+        }
+
+        [HttpPut(Name = "GetFamilyFarm")]
+        public async Task<FamilyFarm> GetFamilyFarm(Guid Id)
+        {
+
+            var result = await _familyFarmService.GetFamilyFarm(Id);
 
             return result;
         }

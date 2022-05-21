@@ -1,4 +1,5 @@
 ﻿using eOPG.ClassLibrary.Api;
+using eOPG.ClassLibrary.Api.Models;
 using eOPG.Repositories.Api.Interfaces;
 using eOPG.Services.Api.Services;
 using System;
@@ -13,19 +14,24 @@ namespace eOPG.Services.Api.ServiceProviders
     {
         #region Constructor
 
-        private readonly IFamilyFarmRepository _familyFarmRepository;
+        private readonly IFamilyFarmRepository _repository;
 
         public FamilyFarmService(IFamilyFarmRepository familyFarmRepository)
         {
-            _familyFarmRepository = familyFarmRepository;
+            _repository = familyFarmRepository;
+        }
+
+        public Task<FamilyFarm> GetFamilyFarm(Guid Id)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
 
 
-        public async Task<FamilyFarmInfo> CreateFamilyFarm(string name, string adress, int regionId, int cityId)
+        async Task<FamilyFarm> IFamilyFarmService.CreateFamilyFarm(string name, string adress, int regionId, int cityId)
         {
-            return await _familyFarmRepository.CreateFamilyFarmAsync(name, adress, regionId, cityId);
+            return await _repository.CreateFamilyFarmAsync(name, adress, regionId, cityId);      
         }
     }
 }

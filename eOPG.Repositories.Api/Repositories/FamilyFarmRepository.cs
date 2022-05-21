@@ -1,4 +1,5 @@
 ﻿using eOPG.ClassLibrary.Api;
+using eOPG.ClassLibrary.Api.Models;
 using eOPG.Repositories.Api.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,17 +11,22 @@ namespace eOPG.Repositories.Api.Repositories
 {
     internal class FamilyFarmRepository : IFamilyFarmRepository
     {
-        public Task<FamilyFarmInfo> CreateFamilyFarmAsync(string name, string adress, int regionId, int cityId)
+        public Task<FamilyFarm> CreateFamilyFarmAsync(string name, string adress, int regionId, int cityId)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteFamilyFarmAsync()
+        public System.Threading.Tasks.Task DeleteFamilyFarmAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<FamilyFarmInfo> UpdateFamilyFarmAsync()
+        public Task<FamilyFarm> GetFamilyFarm(Guid Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<FamilyFarm> UpdateFamilyFarmAsync()
         {
             throw new NotImplementedException();
         }
