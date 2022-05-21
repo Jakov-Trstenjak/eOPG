@@ -10,4 +10,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eOPG.ClassLibrary.Api\eOPG.ClassLibrary.Api.csproj" />
+    <ProjectReference Include="..\eOPG.Repositories.Api\eOPG.Repositories.Api.csproj" />
+  </ItemGroup>
 </Project>
