@@ -1,4 +1,4 @@
-﻿using eOPG.Enums;
+﻿using eOPG.ClassLibrary.Api.Enums;
 
 namespace eOPG.Models
 {

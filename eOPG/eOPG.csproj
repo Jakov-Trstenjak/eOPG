@@ -15,10 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\eOPG.ClassLibrary.Api\eOPG.ClassLibrary.Api.csproj" />
     <ProjectReference Include="..\eOPG.Services.Api\eOPG.Services.Api.csproj" />
   </ItemGroup>
 

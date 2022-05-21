@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eOPG.ClassLibrary.Api;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace eOPG.Services.Api.Services
 {
     public interface IFamilyFarmService
     {
-        Task<CreateFamilyFarmResult> CreateFamilyFarm(string name, string adress, int regionId, int cityId);
+        Task<FamilyFarmInfo> CreateFamilyFarm(string name, string adress, int regionId, int cityId);
     }
 
     public class CreateFamilyFarmResult
