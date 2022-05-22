@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eOPG.Repositories.Api.Interfaces
 {
-    internal interface IResourceRepository
+    public interface IResourceRepository
     {
     }
 }

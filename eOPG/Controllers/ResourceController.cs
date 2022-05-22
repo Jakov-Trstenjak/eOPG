@@ -7,6 +7,16 @@ namespace eOPG.Controllers
     [Route("resource")]
     public class ResourceController : Controller
     {
+        #region Constructor
+        private readonly IResourceService _resourceService;
+
+        public ResourceController(IResourceService resourceService)
+        {
+            _resourceService = resourceService;
+        }
+        #endregion
+
+
         [HttpGet("getResource")]
         public int Get(Guid resourceId)
         {
