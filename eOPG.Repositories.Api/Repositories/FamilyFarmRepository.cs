@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace eOPG.Repositories.Api.Repositories
 {
-    internal class FamilyFarmRepository : IFamilyFarmRepository
+    public class FamilyFarmRepository : IFamilyFarmRepository
     {
         public Task<FamilyFarm> CreateFamilyFarmAsync(string name, string adress, int regionId, int cityId)
         {
