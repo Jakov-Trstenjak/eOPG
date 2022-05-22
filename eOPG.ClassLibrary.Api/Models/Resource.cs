@@ -1,6 +1,7 @@
-﻿using eOPG.Enums;
+﻿
+using eOPG.ClassLibrary.Api.Enums;
 
-namespace eOPG.Models
+namespace eOPG.ClassLibrary.Api.Models
 {
     public class Resource
     {

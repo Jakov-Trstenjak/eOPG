@@ -1,4 +1,4 @@
-﻿namespace eOPG.Enums
+﻿namespace eOPG.ClassLibrary.Api.Enums
 {
     public enum ResourceSubType
     {

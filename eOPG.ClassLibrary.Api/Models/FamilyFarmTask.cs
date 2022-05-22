@@ -1,6 +1,6 @@
-﻿namespace eOPG.Models
+﻿namespace eOPG.ClassLibrary.Api.Models
 {
-    public class Task
+    public class FamilyFarmTask
     {
         public Guid Id { get; set; }
         public Guid FamilyFarmId { get; set; }
