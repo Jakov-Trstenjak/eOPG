@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using eOPG.ClassLibrary.Api.Models;
+using eOPG.Services.Api.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace eOPG.Controllers
 {
@@ -7,17 +9,17 @@ namespace eOPG.Controllers
     public class TaskController : Controller
     {
         #region Constructor
-        private readonly ITaskService _taskService;
+        private readonly IFamilyFarmTaskService _taskService;
 
-        public TaskController(ITaskService personService)
+        public TaskController(IFamilyFarmTaskService taskService)
         {
-            _taskService = personService;
+            _taskService = taskService;
         }
         #endregion
 
 
         [HttpGet(Name = "GetTask")]
-        public async Task<Task> GetTask(Guid Id)
+        public async Task<FamilyFarmTask> GetTask(Guid Id)
         {
 
             var result = await _taskService.GetTask(Id);
@@ -26,7 +28,7 @@ namespace eOPG.Controllers
         }
 
         [HttpGet(Name = "GetTasks")]
-        public async Task<List<Task>> GetTasks(Guid personId)
+        public async Task<List<FamilyFarmTask>> GetTasks(Guid personId)
         {
             var result = await _taskService.GetTasks(personId);
 
@@ -36,7 +38,7 @@ namespace eOPG.Controllers
 
 
         [HttpPost(Name = "StoreTask")]
-        public async Task<IActionResult> StoreTask(Task task)
+        public async Task<IActionResult> StoreTask(FamilyFarmTask task)
         {
 
             var result = await _taskService.StoreTask(task);
