@@ -1,7 +1,7 @@
 ﻿using eOPG.ClassLibrary.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace e_OPG.Controllers
+namespace eOPG.Controllers
 {
     [ApiController]
     [Route("[controller]")]

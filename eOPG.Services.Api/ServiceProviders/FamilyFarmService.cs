@@ -21,12 +21,13 @@ namespace eOPG.Services.Api.ServiceProviders
             _repository = familyFarmRepository;
         }
 
+        #endregion
+        
+
         public Task<FamilyFarm> GetFamilyFarm(Guid Id)
         {
             throw new NotImplementedException();
         }
-
-        #endregion
 
 
         async Task<FamilyFarm> IFamilyFarmService.CreateFamilyFarm(string name, string adress, int regionId, int cityId)

@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace e_OPG.Controllers
+namespace eOPG.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class TaskController : Controller
     {
         public IActionResult Index()
