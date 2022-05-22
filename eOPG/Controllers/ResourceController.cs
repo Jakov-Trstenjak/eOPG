@@ -4,16 +4,16 @@ using Microsoft.AspNetCore.Mvc;
 namespace eOPG.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("resource")]
     public class ResourceController : Controller
     {
-        [HttpGet(Name = "GetResource")]
+        [HttpGet("getResource")]
         public int Get(Guid resourceId)
         {
             return 1;
         }
 
-        [HttpPost(Name = "StoreResource")]
+        [HttpPost("storeResource")]
         public int Get(Resource resource)
         {
             return 1;

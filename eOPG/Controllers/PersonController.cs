@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace eOPG.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("person")]
     public class PersonController : Controller
     {
         #region Constructor
@@ -18,7 +18,7 @@ namespace eOPG.Controllers
         #endregion
 
 
-        [HttpGet(Name = "GetPerson")]
+        [HttpGet("getPerson")]
         public async Task<Person> GetPerson(Guid Id)
         {
 
@@ -27,7 +27,7 @@ namespace eOPG.Controllers
             return result;
         }
 
-        [HttpPost(Name = "StorePerson")]
+        [HttpPost("storePerson")]
         public async Task<IActionResult> StorePerson(Person person)
         {
 

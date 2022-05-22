@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace eOPG.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("familyFarm")]
     public class FamilyFarmController : Controller
     {
         #region Services
@@ -18,7 +18,7 @@ namespace eOPG.Controllers
 
         #endregion
 
-        [HttpPut(Name = "CreateFamilyFarm")]
+        [HttpPut("createFamilyFarm")]
         public async Task<FamilyFarm> CreateFamilyFarm(
             string name,
             string adress,
@@ -31,7 +31,7 @@ namespace eOPG.Controllers
             return result;
         }
 
-        [HttpGet(Name = "GetFamilyFarm")]
+        [HttpGet("getFamilyFarm")]
         public async Task<FamilyFarm> GetFamilyFarm(Guid Id)
         {
 

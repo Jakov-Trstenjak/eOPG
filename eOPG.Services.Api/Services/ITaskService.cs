@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eOPG.Services.Api.Services
 {
-    public interface IFamilyFarmTaskService
+    public interface ITaskService
     {
         Task<FamilyFarmTask> GetTask(Guid familyFarmTaskId);
         Task<List<FamilyFarmTask>> GetTasks(Guid personId);

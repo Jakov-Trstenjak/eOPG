@@ -4,13 +4,13 @@ using eOPG.Services.Api.Services;
 
 namespace eOPG.Services.Api.ServiceProviders
 {
-    public class FamilyFarmTaskService : IFamilyFarmTaskService
+    public class TaskService : ITaskService
     {
         #region Constructor
 
-        private readonly IFamilyFarmTaskService _repository;
+        private readonly ITaskService _repository;
 
-        public FamilyFarmTaskService(IFamilyFarmTaskService familyFarmTaskRepository)
+        public TaskService(ITaskService familyFarmTaskRepository)
         {
             _repository = familyFarmTaskRepository;
         }

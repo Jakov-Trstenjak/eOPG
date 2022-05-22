@@ -5,20 +5,20 @@ using Microsoft.AspNetCore.Mvc;
 namespace eOPG.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("task")]
     public class TaskController : Controller
     {
         #region Constructor
-        private readonly IFamilyFarmTaskService _taskService;
+        private readonly ITaskService _taskService;
 
-        public TaskController(IFamilyFarmTaskService taskService)
+        public TaskController(ITaskService taskService)
         {
             _taskService = taskService;
         }
         #endregion
 
 
-        [HttpGet(Name = "GetTask")]
+        [HttpGet("getTask")]
         public async Task<FamilyFarmTask> GetTask(Guid Id)
         {
 
@@ -27,23 +27,23 @@ namespace eOPG.Controllers
             return result;
         }
 
-        [HttpGet(Name = "GetTasks")]
-        public async Task<List<FamilyFarmTask>> GetTasks(Guid personId)
+        [HttpGet("getTasksForUser")]
+        public async Task<List<FamilyFarmTask>> GetTasksForUser(Guid personId)
         {
-            var result = await _taskService.GetTasks(personId);
 
-            return result;
+            var result = await _taskService.GetTask(personId);
+
+            return new List<FamilyFarmTask> { };
         }
+        
 
-
-
-        [HttpPost(Name = "StoreTask")]
+        [HttpPost("storeTask")]
         public async Task<IActionResult> StoreTask(FamilyFarmTask task)
         {
 
             var result = await _taskService.StoreTask(task);
 
-            return Ok(task);
+            return Ok(result);
         }
     }
 }
